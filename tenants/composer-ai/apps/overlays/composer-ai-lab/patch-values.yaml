@@ -5,9 +5,9 @@ metadata:
   namespace: composer-ai-gitops
 spec:
   sources:
-    - repoURL: https://github.com/redhat-composer-ai/appOfApps.git
+    - repoURL: https://github.com/aokugel/appOfApps.git
       path: appOfApps
-      targetRevision: main
+      targetRevision: elastic instance
       helm:
         parameters:
           - name: namespacePrefix
@@ -16,6 +16,6 @@ spec:
             value: ${SUB_DOMAIN}
         valueFiles:
           - $values/tenants/composer-ai/helm-chart-values/app-of-apps/lab-values.yaml
-    - repoURL: 'https://github.com/redhat-composer-ai/cluster-gitops.git'
+    - repoURL: 'https://github.com/aokugel/cluster-gitops.git'
       targetRevision: main
       ref: values
